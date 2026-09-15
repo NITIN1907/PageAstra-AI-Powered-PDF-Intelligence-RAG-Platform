@@ -1,0 +1,17 @@
+fastapi
+uvicorn[standard]
+python-multipart
+python-dotenv
+
+SQLAlchemy
+psycopg2-binary
+
+groq
+
+pypdf
+
+numpy
+faiss-cpu
+rank-bm25
+
+sentence-transformers

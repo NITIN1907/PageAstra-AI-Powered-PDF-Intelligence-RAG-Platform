@@ -1,0 +1,78 @@
+# =========================
+# Python
+# =========================
+
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+.venv/
+env/
+ENV/
+
+# Python build files
+*.egg-info/
+build/
+dist/
+
+# =========================
+# Environment / Secrets
+# =========================
+
+.env
+.env.*
+!.env.example
+
+# =========================
+# Uploaded PDFs
+# =========================
+
+uploads/
+
+# =========================
+# FAISS / Generated Storage
+# =========================
+
+storage/*.faiss
+storage/*.json
+
+# =========================
+# Logs
+# =========================
+
+*.log
+
+# =========================
+# React / Node
+# =========================
+
+node_modules/
+frontend/node_modules/
+
+# React/Vite build
+frontend/dist/
+frontend/build/
+
+# =========================
+# IDE
+# =========================
+
+.vscode/
+.idea/
+
+# =========================
+# OS
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# =========================
+# Temporary
+# =========================
+
+*.tmp
+*.temp
+*.swp
