@@ -4,10 +4,17 @@ from sentence_transformers import CrossEncoder
 class RerankerService:
 
     def __init__(self):
+        self.model = None
 
-        self.model = CrossEncoder(
-            "cross-encoder/ms-marco-MiniLM-L-6-v2"
-        )
+    def get_model(self):
+
+        if self.model is None:
+            self.model = CrossEncoder(
+                "cross-encoder/ms-marco-MiniLM-L-6-v2",
+                device="cpu"
+            )
+
+        return self.model
 
     # =================================
     # RERANK
@@ -28,12 +35,10 @@ class RerankerService:
         # -------------------------
 
         pairs = [
-
             [
                 query,
                 document["text"]
             ]
-
             for document in documents
         ]
 
@@ -41,7 +46,9 @@ class RerankerService:
         # SCORE
         # -------------------------
 
-        scores = self.model.predict(
+        model = self.get_model()
+
+        scores = model.predict(
             pairs
         )
 
