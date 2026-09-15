@@ -30,7 +30,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
-        "https://your-rag-project.vercel.app"
+        "https://page-astra-ai-powered-pdf-intellige-beta.vercel.app/"
     ],
 
     allow_credentials=True,
